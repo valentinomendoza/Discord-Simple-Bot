@@ -1,11 +1,12 @@
-## Guia Discord.js Bot
-# Esta guia es para iniciantes o iniciar
+# Guia Discord.js Bot
+## Esta guia es para iniciantes o iniciar recuerda que necesitas node.js 
 > Iniciar en el bot
 ```js
 const Discord = require('discord.js'); // Requerimos discord.js (npm i --s discord.js)
 const Client = new Discord.Client() // Creamos el cliente
 const prefix = "TU-PREFIX" // Nos servira para despues
 Client.login('Tu-Token') // Nos logeamos
+//Abren node y hacen node archivo.js
 ```
 # Eventos
 ## Eventos basicos para un bot
