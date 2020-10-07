@@ -66,9 +66,14 @@ message.channel.send(miembro.joinedAt.toLocateString()) } // Enviamos cuando ent
 # Diferencias entre Usuario y Miembro
 > Usuario : El usuario es la cuenta de un usuario es decir tiene cosas como avatar o nombre
 - Propiedades basicas:
-- username // Nombre de usuario de un usuario 
+- username // Nombre de usuario de un usuario ejemplo: ILuck
 - avatar // Avatar un usuario (para conseguirlo usa displayAvatarURL)
+- discriminathor // Son los 4 numeros de identificador ejemplo: 2060
 - tag // Muestra el nombre completo ejemplo: ILuck#2060
 - createdAt // Cuando se creo la cuenta
 > Miembro : El miembro es el miembro de un servidor es decir que tiene fecha de entrada o se puede kickear
 - Propiedades Basicas
+- bannable // Muestra si es baneable por el bot
+- kickeable // Muestra si es kickeable por el bot
+- displayName // Muestra su nombre en el servidor
+- displayHexColor // Muestra su color en hex
