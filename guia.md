@@ -23,5 +23,8 @@ const args = message.content.slice(prefix.length).trim().split(/ +/g);
 const comando = args.shift().toLowerCase();
 })
 ```
-> Como hacer comandos
-Dentro del evento de (message)
+> Como hacer comandos (dentro del evento de message)
+```js
+if(comando === 'hola') { 
+message.channel.send('hola!')
+```
