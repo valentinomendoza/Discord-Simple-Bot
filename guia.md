@@ -26,5 +26,15 @@ const comando = args.shift().toLowerCase();
 > Como hacer comandos (dentro del evento de message)
 ```js
 if(comando === 'hola') { 
-message.channel.send('hola!')
+message.channel.send('hola!')}
+```
+> Asi deberia quedar 
+```js
+client.on("message", (message) => { // Cuando envian un mensaje
+if(message.author.bot) return; // Si el autor es un bot retornamos nada
+const args = message.content.slice(prefix.length).trim().split(/ +/g);
+const comando = args.shift().toLowerCase();
+if(comando === 'hola'){ 
+message.channel.send('hola') }
+})
 ```
