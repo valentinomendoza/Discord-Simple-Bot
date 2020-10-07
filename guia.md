@@ -39,3 +39,36 @@ if(comando === 'hola'){
 message.channel.send('hola') }
 })
 ```
+## Explicacion de como funciona:
+```js
+client.on("message",/* Cuando detecta un mensaje */ (message) => { /*Ejecutamos codigo*/})
+```
+# Sobre message
+> Sus propiedades basicas
+> Para usar la propiedad usa message.<propiedad>
+- channel // El canal donde se mando el mensaje
+- author // Usuario que envio el mensaje
+- guild // Servidor donde se envio el mensaje
+
+# Usando usuario
+```js
+if(comando === 'avatar') { 
+const usuario = message.mentions.users.first() || message.author // Tomamos al primer usuario mencionado o al autor
+message.channel.send(usuario.displayAvatarURL()) // Enviamos el avatar
+}
+```
+# Usando miembro
+```js
+if(comando === 'entrada') {
+const miembro = message.mentions.members.first() || message.member // Tomamos al primer miembro mencionado o al autor
+message.channel.send(miembro.joinedAt.toLocateString()) } // Enviamos cuando entro
+```
+# Diferencias entre Usuario y Miembro
+> Usuario : El usuario es la cuenta de un usuario es decir tiene cosas como avatar o nombre
+- Propiedades basicas:
+- username // Nombre de usuario de un usuario 
+- avatar // Avatar un usuario (para conseguirlo usa displayAvatarURL)
+- tag // Muestra el nombre completo ejemplo: ILuck#2060
+- createdAt // Cuando se creo la cuenta
+> Miembro : El miembro es el miembro de un servidor es decir que tiene fecha de entrada o se puede kickear
+- Propiedades Basicas
