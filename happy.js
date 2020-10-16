@@ -8,21 +8,21 @@ client.on("ready", () => { // Evento al iniciar el bot
 happy.on("message", (message) => { // Evento de message
   if(message.author.bot) // Si el mensaje es de un bot retornamos
   const args = message.content.slice(prefix.length).trim().split(/ +/g); // Definimos args
-  const command = args.shift().toLowerCase(); // Definimos command
-if(command === 'hi') {  // Si el comando que usan es hi
+  const comando = args.shift().toLowerCase(); // Definimos comando
+if(comando === 'hi') {  // Si el comando que usan es hi
 message.channel.send('Hola!') } // Enviamos el mensaje al canal
-if(command === 'bye') {  // Si el comando es bye
+if(comando === 'bye') {  // Si el comando es bye
 message.channel.send('Adios ;(') } // Enviamos un mensaje al canal
 // <----------------------------------USO DE USUARIOS-------------------------->
-if(command === 'coockie') {  // Si el comando es coockie
+if(comando === 'coockie') {  // Si el comando es coockie
 const user = message.mentions.users.first() // Tomamos al usuario que usamos primero!
 message.channel.send(`${message.author.username} Le ha dado una galleta a ${user.username}`) }
 // <---------------------------------USO DE MIEMBROS--------------------------->
-if(command === 'joinedat') {  // Si el comando es joinedat
+if(comando === 'joinedat') {  // Si el comando es joinedat
   const miembro = message.mentions.members.first() || message.member; // Tomamos al miembro que menciono primer
   message.channel.send(miembro.joinedAt.toLocateString()) }// ENviamos cuando entro
 // <---------------------------------USO DE PERMISOS--------------------------->
-if(command === 'kick') { // Si el comando es kick
+if(comando === 'kick') { // Si el comando es kick
 const miembro = message.mentions.members.first() // Tomamos al miembro que menciono primero
 if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply('No tienes permisos') // Si no tiene permisos devuelve
 try { miembro.kick() } catch { message.reply('Ha ocurrido un error :( ') } } // Kickeamos
