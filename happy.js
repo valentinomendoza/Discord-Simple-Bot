@@ -25,5 +25,5 @@ if(comando === 'joinedat') {  // Si el comando es joinedat
 if(comando === 'kick') { // Si el comando es kick
 const miembro = message.mentions.members.first() // Tomamos al miembro que menciono primero
 if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply('No tienes permisos') // Si no tiene permisos devuelve
-try { miembro.kick() } catch { message.reply('Ha ocurrido un error :( ') } } // Kickeamos
+try { miembro.kick() } catch(err) { message.reply('Ha ocurrido un error :( ') } } // Kickeamos
 })
