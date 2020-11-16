@@ -27,3 +27,9 @@ const miembro = message.mentions.members.first() // Tomamos al miembro que menci
 if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply('No tienes permisos') // Si no tiene permisos devuelve
 try { miembro.kick() } catch(err) { message.reply('Ha ocurrido un error :( ') } } // Kickeamos
 })
+
+if(comando === 'avatar') {
+const usuario = message.mentions.members.first() || message.author; // Decimos que usuario es igual a la primera mencion dentro del mensaje, si no se cumple retorna el autor del mensaje
+
+message.channel.send(`Este es el Avatar URL ${usuario.displayAvatarURL()}`) // Entonces ya definido 'usuario' añadimos .displayAvatarURL() y nos retornara un String y lo enviamos
+}
